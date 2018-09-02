@@ -8,16 +8,37 @@ var intro = {
     "buttonText": "Begin experiment",
     // render function renders the view
     render: function() {
-        
         viewTemplate = $('#intro-view').html();
+
         $('#main').html(Mustache.render(viewTemplate, {
             title: this.title,
             text: this.text,
             button: this.buttonText
         }));
 
+        var prolificId = $('#prolific-id');
+        var IDform = $('#prolific-id-form');
+        var next = $('#next');
+
+        if (config_deploy.deployMethod !== "Prolific") {
+            IDform.addClass('nodisplay');
+            next.removeClass('nodisplay');
+        }
+
+        prolificId.on('keyup', function() {
+            if (prolificId.val().trim() !== "") {
+                next.removeClass('nodisplay');
+            } else  {
+                next.addClass('nodisplay');                
+            }
+        });
+
         // moves to the next view
-        $('#next').on('click', function(e) {
+        next.on('click', function(e) {
+            if (config_deploy.deployMethod === "Prolific") {
+                exp.global_data.prolific_id = prolificId.val().trim();
+            }
+            
             exp.findNextView();
         });
 
