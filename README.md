@@ -1,10 +1,11 @@
-# Template for MTurk deployment
+# Template for Prolific deployment
+
 
 ## Cloning and running the experiment
 
 ```
 # clone the repo, e.g.:
-git clone https://github.com/babe-project/MTurkTemplate
+git clone https://github.com/babe-project/ProlificDeployTemplate
 
 # go to 'MTurkTemplate'
 
