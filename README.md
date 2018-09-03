@@ -40,7 +40,7 @@ and replace the `"prolificCode"` value in `config/config_deploy` with the new co
 
 3. Deploy the experiment again to get the correct completion code on your study website.
 
-    You can check whether the code has been updated by checking `**_url_to_your_study_**/config/config_deploy.js`
+    You can check whether the code has been updated by checking `_url_to_your_study_/config/config_deploy.js`
 
     !['config](images/readme/config.png)
 
