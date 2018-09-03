@@ -42,7 +42,7 @@ and replace the `"prolificCode"` value in `config/config_deploy` with the new co
 
     You can check whether the code has been updated by checking `**_url_to_your_study_**/config/config_deploy.js`
 
-    !['config](images/readme/prolific_config.png)
+    !['config](images/readme/config.png)
 
 4. Fill the rest of the details about your study on Prolific
 
