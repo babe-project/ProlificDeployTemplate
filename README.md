@@ -34,11 +34,15 @@ The "Prolific" deploy_method adds:
 
 2. Get the completion code of the study you just created 
 
-!['new](images/readme/prolific_code.png)
+!['code](images/readme/prolific_code.png)
 
-and replace the "prolificCode" value in config/config_deploy with the new completion code.
+and replace the `"prolificCode"` value in `config/config_deploy` with the new completion code.
 
-3. Deploy the experiment again to get the correct completion code on your study website
+3. Deploy the experiment again to get the correct completion code on your study website.
+
+    You can check whether the code has been updated by checking `**_url_to_your_study_**/config/config_deploy.js`
+
+    !['config](images/readme/prolific_config.png)
 
 4. Fill the rest of the details about your study on Prolific
 
