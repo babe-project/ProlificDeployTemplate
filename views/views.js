@@ -148,7 +148,7 @@ var thanks = {
                 thanksMessage: this.message,
             }));
         } else if (config_deploy.deployMethod === 'Prolific') {
-            var prolificURL = 'https://prolific.ac/submissions/complete?cc=' + config_deploy.prolificCode;
+            var prolificURL = 'https://app.prolific.ac/submissions/complete?cc=' + config_deploy.prolificCode;
 
             $('main').html(Mustache.render(viewTemplate, {
                 thanksMessage: this.message,
