@@ -276,11 +276,6 @@ input[type="range"]:focus::-moz-range-thumb {
     margin: 5px 0 0 0;
 }
 
-.thanks-templ {
-    margin: 0 20px;
-    max-width: inherit;
-}
-
 .thanks-templ .debug-results {
     text-align: left;
 }

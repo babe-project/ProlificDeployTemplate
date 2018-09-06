@@ -61,7 +61,7 @@ var main = {
     name: 'main',
     // render function renders the view
     render : function(CT) {
-		
+        
         // fill variables in view-template
         var viewTemplate = $('#main-view').html();
         $('#main').html(Mustache.render(viewTemplate, {
@@ -69,10 +69,6 @@ var main = {
             option1:  exp.trial_info.main_trials[CT].option1,
             option2:  exp.trial_info.main_trials[CT].option2,
         }));
-        
-        // update the progress bar based on how many trials there are in this round
-        var filled = exp.currentTrialInViewCounter * (180 / exp.views_seq[exp.currentViewCounter].trials);
-        $('#filled').css('width', filled);
 
         // event listener for buttons; when an input is selected, the response
         // and additional information are stored in exp.trial_info
@@ -94,7 +90,7 @@ var main = {
         startingTime = Date.now();
         
     },
-	trials : main_trials.length
+    trials : main_trials.length
 };
 
 var postTest = {
@@ -141,7 +137,7 @@ var thanks = {
         viewTemplate = $('#thanks-view').html();
 
         // what is seen on the screen depends on the used deploy method
-		//    normally, you do not need to modify this
+        //    normally, you do not need to modify this
         if ((config_deploy.is_MTurk) || (config_deploy.deployMethod === 'directLink')) {
             // updates the fields in the hidden form with info for the MTurk's server
             $('#main').html(Mustache.render(viewTemplate, {
