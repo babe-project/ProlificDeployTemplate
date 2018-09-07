@@ -14,7 +14,7 @@ var config_deploy = {
     
     // optional fields
     // set the prolific code if the deploy method is "Prolific"
-    "prolificCode": "ABCD1234",
+    "prolificCode": "ZADBZUYX",
     
     // who to contact in case of trouble
     "contact_email": "exprag@gmail.com", 

@@ -148,7 +148,7 @@ var thanks = {
 
             $('main').html(Mustache.render(viewTemplate, {
                 thanksMessage: this.message,
-                extraMessage: "Please press the button below to confirm that you completed the expetiment with Prolific<br />" + '<a href=' + prolificURL +  ' class="prolific-url">Confirm</a>'
+                extraMessage: "Please press the button below to confirm that you completed the experiment with Prolific<br />" + '<a href=' + prolificURL +  ' class="prolific-url">Confirm</a>'
             }));
         } else if (config_deploy.deployMethod === 'debug') {
             $('main').html(Mustache.render(viewTemplate, {}));
