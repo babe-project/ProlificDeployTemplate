@@ -40,7 +40,7 @@ and replace the `"prolificURL"` value in `config/config_deploy` with the new com
 
 3. Deploy the experiment again to get the correct prolific URL on your study website.
 
-    You can check whether the URL has been updated by checking `_url_to_your_study_/config/config_deploy.js`
+    You can check whether the URL has been updated by checking `_url_to_your_study_/config/config_deploy.js` or opening the browser Console and typing `config_deploy.prolificURL`
 
 4. Fill the rest of the details about your study on Prolific
 
