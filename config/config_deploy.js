@@ -13,9 +13,10 @@ var config_deploy = {
     "deployMethod" : "Prolific", 
     
     // optional fields
-    // set the prolific code if the deploy method is "Prolific"
-    "prolificCode": "ZADBZUYX",
-    
+    // set the prolific completion URL if the deploy method is "Prolific"
+    // the URL should look something like this - https://app.prolific.ac/submissions/complete?cc=EZXBK7UQ
+    "prolificURL": "https://app.prolific.ac/submissions/complete?cc=ZADBZUYX",
+
     // who to contact in case of trouble
     "contact_email": "exprag@gmail.com", 
 };
