@@ -4,16 +4,16 @@ $('document').ready(function() {
     exp.init();
     // prevent scrolling when space is pressed (firefox does it)
     window.onkeydown = function(e) {
-    if (e.keyCode == 32 && e.target == document.body) {
-        e.preventDefault();
-    }
+        if (e.keyCode == 32 && e.target == document.body) {
+            e.preventDefault();
+        }
     };
 });
 
 // empty shell for 'exp' object; to be filled with life by the init() function
 var exp = {};
 
-exp.init = function(){
+exp.init = function() {
 
     // allocate storage room for global data, trial data, and trial info
     this.global_data = {};
@@ -34,7 +34,9 @@ exp.init = function(){
     this.progress.add();
 
     // insert a Current Trial counter for each view
-    _.map(this.views_seq, function(i) {i.CT = 0});
+    _.map(this.views_seq, function(i) {
+        i.CT = 0
+    });
 
     // initialize procedure
     this.currentViewCounter = 0;
@@ -94,7 +96,7 @@ exp.submit = function() {
         var columns = [];
 
         for (var i=0; i<trialData.length; i++) {
-            for (prop in trialData[i]) {
+            for (var prop in trialData[i]) {
                 if ((trialData[i].hasOwnProperty(prop)) && (columns.indexOf(prop) === -1)) {
                     columns.push(prop);
                 }
@@ -137,6 +139,8 @@ exp.submit = function() {
         output += "</tr></thead>";
 
         output += "<tbody><tr>";
+        
+        var entry = "";
 
         for (var i = 0; i < trials.length; i++) {
             var currentTrial = trials[i];
@@ -165,7 +169,9 @@ exp.submit = function() {
     var flattenData = function(data){
         var trials = data.trials;
         delete data.trials;
-        var out = _.map(trials, function(t) {return _.merge(t, data);});
+        var out = _.map(trials, function(t) {
+            return _.merge(t, data);
+        });
         return out;
     };
 
@@ -188,7 +194,6 @@ exp.submit = function() {
             HITData[qArray[i].split('=')[0]] = qArray[i].split('=')[1];
         }
 
-        console.log(HITData);
         return HITData;
     };
     
@@ -218,7 +223,7 @@ exp.submit = function() {
         }).appendTo(form);
     } else if (config_deploy.deployMethod === 'Prolific') {
         console.log();
-    } else if (config_deploy.deployMethod === 'directLink'){
+    } else if (config_deploy.deployMethod === 'directLink') {
         console.log();
     } else if (config_deploy.deployMethod === 'debug') {
         console.log();
@@ -296,10 +301,14 @@ var prepareDataFromCSV = function(practiceTrialsFile, trialsFile) {
     return data;
 };
 
-loop = function(arr, count, shuffleFlag) {
-    return _.flatMapDeep(_.range(count), function(i) {return arr})
+var loop = function(arr, count, shuffleFlag) {
+    return _.flatMapDeep(_.range(count), function(i) {
+        return arr
+    })
 };
 
-loopShuffled = function(arr, count) {
-    return _.flatMapDeep(_.range(count), function(i) {return _.shuffle(arr)})
+var loopShuffled = function(arr, count) {
+    return _.flatMapDeep(_.range(count), function(i) {
+        return _.shuffle(arr)
+    })
 };
